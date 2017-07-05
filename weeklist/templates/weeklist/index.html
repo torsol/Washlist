@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        {% for year in year_list %}
+            <div class="card-content valign center">
+                <div class="card-panel teal lighten-2">{{ year }}</div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+</body>
+</html>

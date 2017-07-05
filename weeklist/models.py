@@ -4,8 +4,15 @@ class Year(models.Model):
     name = models.CharField(max_length=150)
     room = models.CharField(max_length=150)
 
+    def __str__(self):
+        return self.name + ': ' + self.room
+
 
 class Week(models.Model):
-    week_num = models.IntegerField(max_length=52)
+    Year = models.ForeignKey(Year, on_delete=models.CASCADE)
+    week_num = models.IntegerField()
     washer = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.week_num
 
