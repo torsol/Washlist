@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <title>Overview</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'weeklist/style.css' %}" />
 </head>
 <body>
     <div class="container">
         {% for year in year_list %}
             <div class="card-content valign center">
-                <div class="card-panel teal lighten-2">{{ year }}</div>
+                <div class="card-panel teal lighten-2"><h1>{{ year }}</h1></div>
             </div>
         {% endfor %}
     </div>

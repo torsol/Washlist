@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+     <link rel="stylesheet" type="text/css" href="{% static 'weeklist/style.css' %}" />
+</head>
+<body>
+<div class="card-content valign center">
+
+ <div class="card-panel amber"><h1>{{ year }}</h1></div>
+    <div class="container">
+        {% for week in year.week_set.all %}
+                <div class="card-panel teal accent-4"><h1>week {{ week }}: {{ week.washer }} </h1></div>
+        {% endfor %}
+    </div>
+
+</body>
+</body>
+</html>

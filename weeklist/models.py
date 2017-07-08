@@ -14,5 +14,5 @@ class Week(models.Model):
     washer = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.week_num
+        return str(self.week_num)
 
