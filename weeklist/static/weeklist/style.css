@@ -5,3 +5,15 @@ h1 {
 h10 {
     color: ghostwhite;
 }
+
+#lock {
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#topRow {
+    position: fixed;
+}

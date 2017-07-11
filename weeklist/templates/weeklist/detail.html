@@ -4,6 +4,7 @@
     {% load static %}
     <meta charset="UTF-8">
     <title>List</title>
+    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'weeklist/style.css' %}" />
 </head>
@@ -11,9 +12,27 @@
 <div class="card-content valign center">
 
  <div class="card-panel amber"><h1>{{ year }}</h1></div>
+
+<div class="container" id="lock">
+    <div class="row">
+        <div class="col s2"><div class="card-panel teal accent-4"><h1>  Week  </h1></div></div>
+        <div class="col s10"><div class="card-panel teal accent-4"><h1> Washer </h1></div></div>
+    </div>
+</div>
+<div class="container" style="visibility: hidden">
+     <div class="row">
+        <div class="col s2"><div class="card-panel teal accent-4"><h1>  Week  </h1></div></div>
+        <div class="col s10"><div class="card-panel teal accent-4"><h1> Washer </h1></div></div>
+    </div>
+</div>
+
+
     <div class="container">
         {% for week in year.week_set.all %}
-                <div class="card-panel teal accent-4"><h1>week {{ week }}: {{ week.washer }} </h1></div>
+            <div class="row">
+                <div class="col s2"><div class="card-panel teal accent-4"><h1>{{ week }}</h1></div></div>
+                <div class="col s10"><div class="card-panel teal accent-4"><h1>{{ week.washer }} </h1></div></div>
+            </div>
         {% endfor %}
     </div>
 
