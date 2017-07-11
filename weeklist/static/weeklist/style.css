@@ -15,5 +15,16 @@ h10 {
 }
 
 #topRow {
-    position: fixed;
+    margin-top: -10px;
+}
+
+.row {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#button {
+    position: relative;
+    margin-bottom: -30px;
+    top: -30px;
 }

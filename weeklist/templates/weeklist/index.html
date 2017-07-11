@@ -13,7 +13,7 @@
     <div class="container">
         {% for year in year_list %}
             <div class="card-content valign center">
-                <div class="card-panel teal lighten-2"><h10>{{ year }}</h10></div>
+                <a href="{% url 'weeklist:detail' year.id %}"><div class="card-panel teal lighten-2"><h10>{{ year }}</h10></div></a>
             </div>
         {% endfor %}
     </div>
