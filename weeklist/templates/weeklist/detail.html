@@ -26,13 +26,14 @@
     <div class="container">
         {% for week in year.week_set.all %}
             <div class="row">
-
+            {% if start <= week.week_num %}
             {% if week.week_num == current_week %}
                 <div class="col s2"><div class="card-panel amber"><h1>{{ week }}</h1></div></div>
-                <div class="col s10"><div class="card-panel amber"><h1>{{ week.washer }} </h1></div></div>
+                <a href="{% url 'weeklist:singleweek' year.id week.week_num %}"><div class="col s10"><div class="card-panel amber"><h1>{{ week.washer }} </h1></div></div></a>
             {% else %}
                 <div class="col s2"><div class="card-panel teal accent-4"><h1>{{ week }}</h1></div></div>
-                <div class="col s10"><div class="card-panel teal accent-4"><h1>{{ week.washer }} </h1></div></div>
+                <a href="{% url 'weeklist:singleweek' year.id week.week_num %}"><div class="col s10"><div class="card-panel teal accent-4"><h1>{{ week.washer }} </h1></div></div></a>
+            {% endif %}
             {% endif %}
             </div>
         {% endfor %}

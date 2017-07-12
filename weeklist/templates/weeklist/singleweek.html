@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <title>{{ week }}</title>
+    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'weeklist/style.css' %}" />
+</head>
+<body>
+    <div class="col s2"><div class="card-panel amber"><h1>{{ week }}</h1></div></div>
+    <div class="col s10"><div class="card-panel amber"><h1>{{ week.washer }} </h1></div></div>
+</body>
+</html>
